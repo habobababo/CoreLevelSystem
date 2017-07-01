@@ -2,8 +2,8 @@
 Core_LevelSystem
 ===============
 
-****Requirements
-For this addon you need [This Addon](https://github.com/habobababo/database_c)<br>
+****Requirements****
+For this addon you need [this Addon](https://github.com/habobababo/database_c)<br>
 
 ----------
 # <i class="icon-file"></i> Developer documentation
