@@ -1,9 +1,9 @@
 
-Core_LevelSystem
+CoreLevelSystem
 ===============
 
-##Requirements##<br>
-For Core_LevelSystem you need [database_c](https://github.com/habobababo/database_c)<br>
+****Requirements****<br>
+for CoreLevelSystem you need [database_c](https://github.com/habobababo/database_c)<br>
 
 
 # <i class="icon-file"></i> Developer documentation
