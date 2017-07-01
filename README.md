@@ -2,7 +2,8 @@
 Core_LevelSystem
 ===============
 
-
+****Requirements
+For this addon you need [This Addon](https://github.com/habobababo/database_c)<br>
 
 ----------
 # <i class="icon-file"></i> Developer documentation
@@ -42,12 +43,12 @@ Core_LevelSystem
 ----------
 Configuration is @ [levelsystem/lua/autorun/config.lua](https://github.com/habobababo/CoreLevelSystem/blob/master/levelsystem/lua/autorun/config.lua)
 
->C_Level.MaxXP = 100
-C_Level.MaxLevel = 1000
-C_Level.SaveLevelTime = 30
-C_Level.XPOverTimeTime = 100 // in seconds
-C_Level.MinPlayers = 0
-C_Level.XPOverTimeXP = 5
+>C_Level.MaxXP = 100<br>
+C_Level.MaxLevel = 1000<br>
+C_Level.SaveLevelTime = 30<br>
+C_Level.XPOverTimeTime = 100 // in seconds<br>
+C_Level.MinPlayers = 0<br>
+C_Level.XPOverTimeXP = 5<br>
 
 ----------
 powered by ![cc](http://37.228.134.43/files/files/logos/Logo/128x128_grey.png) [Core-Community.de](http://core-community.de/)
