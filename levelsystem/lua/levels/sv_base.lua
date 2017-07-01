@@ -22,7 +22,7 @@ local meta = FindMetaTable("Player")
 function meta:C_SaveLevel()
 		local level = self:C_GetLevel()
 		local xp = self:C_GetXP()
-		corequery("UPDATE level SET level = '"..level.."', xp = '"..xp.."' WHERE steamid = '"..v:SteamID64().."' ")
+		corequery("UPDATE level SET level = '"..level.."', xp = '"..xp.."' WHERE steamid = '"..self:SteamID64().."' ")
 end
 
 function meta:C_LevelUp()
@@ -36,14 +36,11 @@ function meta:C_LevelUp()
 
 	self:SetNWInt("C_LVL", level + 1)
 	self:SetNWInt("C_XP", 0)
-
 	hook.Run("C_PlayerLevelUP", self, self:GetNWInt("C_LVL"))
   BroadcastLua( "hook.Run( [[C_PlayerLevelUP]], ".. self ..", " .. self:GetNWInt("C_LVL") .. " )" )
-
 end
 
 function meta:C_AddXP(xp)
-	if !IsValid(xp) then return end
 	if !self.C_Init then return end
 	local level = self:C_GetLevel()
 	local playerxp = self:C_GetXP()
