@@ -3,9 +3,6 @@ Core_LevelSystem
 ===============
 
 
-**Core_LevelSystem**
-
-
 
 ----------
 # <i class="icon-file"></i> Developer documentation
@@ -35,12 +32,22 @@ Core_LevelSystem
 <i class="icon-user"><i class="icon-th-list">Shared functions:
 
 >**ply:C_GetLevel()** returns LEVEL of PLAYER<br>
-**ply:C_GetXP()** returns XP of PLAYER
+**ply:C_GetXP()** returns XP of PLAYER<br>
+**ply:C_XPLeft()** returns missing XP to levelup
 
 
 
 ----------
 # <i class="icon-pencil"></i> Configuration
 ----------
+Configuration is @ [levelsystem/lua/autorun/config.lua](https://github.com/habobababo/CoreLevelSystem/blob/master/levelsystem/lua/autorun/config.lua)
 
+>C_Level.MaxXP = 100
+C_Level.MaxLevel = 1000
+C_Level.SaveLevelTime = 30
+C_Level.XPOverTimeTime = 100 // in seconds
+C_Level.MinPlayers = 0
+C_Level.XPOverTimeXP = 5
 
+----------
+powered by ![cc](http://37.228.134.43/files/files/logos/Logo/128x128_grey.png) [Core-Community.de](http://core-community.de/)
