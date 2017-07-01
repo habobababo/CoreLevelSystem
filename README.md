@@ -2,10 +2,10 @@
 Core_LevelSystem
 ===============
 
-****Requirements****
-For this addon you need [this Addon](https://github.com/habobababo/database_c)<br>
+##Requirements##<br>
+For Core_LevelSystem you need [database_c](https://github.com/habobababo/database_c)<br>
 
-----------
+
 # <i class="icon-file"></i> Developer documentation
 -------------
 <i class="icon-th-list">Serverside hooks:
