@@ -26,7 +26,7 @@ function meta:C_LevelUp()
 	local level = self:C_GetLevel()
 	local xp = self:C_GetXP()
 
-	if level >= TTT_C.MaxLevel then
+	if level >= C_Level.MaxLevel then
 		return
 	end
 
@@ -43,11 +43,11 @@ function meta:C_AddXP(xp)
 	local level = self:C_GetLevel()
 	local playerxp = self:C_GetXP()
 
-	if playerxp + xp == TTT_C.MaxXP then
+	if playerxp + xp == C_Level.MaxXP then
 		self:C_LevelUp()
-	elseif playerxp + xp > TTT_C.MaxXP then
+	elseif playerxp + xp > C_Level.MaxXP then
 		self:C_LevelUp()
-		self:C_AddXP((playerxp + xp) - TTT_C.MaxXP)
+		self:C_AddXP((playerxp + xp) - C_Level.MaxXP)
 	else
 		self:SetNWInt("C_XP", playerxp + xp)
 	end
@@ -70,12 +70,12 @@ function meta:C_ResetPlayer()
 end
 
 local function C_XPOverTime()
-	if #player.GetAll() > TTT_C.MinPlayers then
+	if #player.GetAll() > C_Level.MinPlayers then
 		for k,v in pairs(player.GetAll()) do
 			if !v:Team() == TEAM_SPEC then
-				v:C_AddXP(TTT_C.XPOverTimeXP)
+				v:C_AddXP(C_Level.XPOverTimeXP)
 			end
 		end
 	end
 end
-timer.Create("XPOverTime_Timer", TTT_C.XPOverTimeTime, 0, XPOverTime)
+timer.Create("XPOverTime_Timer", C_Level.XPOverTimeTime, 0, XPOverTime)
