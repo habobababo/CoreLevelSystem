@@ -35,7 +35,6 @@ function meta:C_LevelUp()
 
 	self:SetNWInt("C_LVL", level + 1)
 	self:SetNWInt("C_XP", 0)
-	Surf_Notification("Levelup!", self)
 	self:EmitSound( "core/levelup.wav" )
 	hook.Run("C_PlayerLevelUP", self, self:GetNWInt("C_LVL"))
 end
@@ -75,7 +74,6 @@ local function C_XPOverTime()
 		for k,v in pairs(player.GetAll()) do
 			if v:Team() != TEAM_SPEC then
 				v:C_AddXP(C_Level.XPOverTimeXP)
-				Surf_Notification("+"..C_Level.XPOverTimeXP.." for playing!", v)
 			end
 		end
 	end
