@@ -12,6 +12,7 @@ C_Level.XPOverTimeXP = 5
 // DO NOT EDIT BELOW HERE //
 
 if SERVER then
+  resource.AddFile("sound/core/levelup.wav")
   include("levels/sv_main.lua")
   AddCSLuaFile("levels/cl_main.lua")
 end

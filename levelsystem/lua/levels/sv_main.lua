@@ -1,6 +1,4 @@
 
-resource.AddFile("sound/core/levelup.wav")
-
 local function C_InitialSpawn(ply)
 	local level = 1
 	local xp = 0
