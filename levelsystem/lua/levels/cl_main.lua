@@ -23,9 +23,13 @@ hook.Add( "HUDPaint", "C_DrawLevel", function()
 	local xp = lp:C_GetXP() or ""
 
 	if LocalPlayer():Alive() then
-			drawBlur( ScrW() - 80 , 80, 80, 32, 3, 6, 255 )
-			draw.RoundedBox(0,  ScrW() - 80 , 80, 80, 32, Color(100, 100, 100,160))
-			draw.RoundedBox(0,  ScrW() - 80 , 80, xp * 0.80, 32, Color(255, 255, 255,255))
-			draw.SimpleText("LVL: " ..level, "Trebuchet24", ScrW() - 70 , 84,  Color(0,0,0,255))
+			drawBlur( 0 , ScrH() - 175, 150, 30, 3, 6, 255 )
+			draw.RoundedBox(0,  0 , ScrH() - 175, 150, 30, Color(0, 0, 0,100))
+			draw.RoundedBox(0,  4 , ScrH() - 172, 142, 24, Color(0, 0, 0,100))
+			draw.RoundedBox(0,  4 , ScrH() - 172, xp * 1.42, 24, Color(0, 180, 180,100))
+
+			draw.SimpleText("LVL: " ..level, "Trebuchet24", 10 , ScrH() - 172 + 1,  Color(255,255,255,255), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP )
+			draw.SimpleText(xp.."/"..C_Level.MaxXP, "Trebuchet24", 145 , ScrH() - 172 + 1,  Color(255,255,255,100), TEXT_ALIGN_RIGHT, TEXT_ALIGN_TOP )
 	end
+
 end)

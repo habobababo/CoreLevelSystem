@@ -1,4 +1,6 @@
 
+resource.AddFile("sound/core/levelup.wav")
+
 local function C_InitialSpawn(ply)
 	local level = 1
 	local xp = 0
@@ -29,22 +31,21 @@ function meta:C_LevelUp()
 	local level = self:C_GetLevel()
 	local xp = self:C_GetXP()
 	if !self.C_Init then return end
-
 	if level >= C_Level.MaxLevel then
 		return
 	end
 
 	self:SetNWInt("C_LVL", level + 1)
 	self:SetNWInt("C_XP", 0)
+	Surf_Notification("Levelup!", self)
+	self:EmitSound( "core/levelup.wav" )
 	hook.Run("C_PlayerLevelUP", self, self:GetNWInt("C_LVL"))
-  BroadcastLua( "hook.Run( [[C_PlayerLevelUP]], ".. self ..", " .. self:GetNWInt("C_LVL") .. " )" )
 end
 
 function meta:C_AddXP(xp)
 	if !self.C_Init then return end
 	local level = self:C_GetLevel()
 	local playerxp = self:C_GetXP()
-
 	if playerxp + xp == C_Level.MaxXP then
 		self:C_LevelUp()
 	elseif playerxp + xp > C_Level.MaxXP then
@@ -76,6 +77,7 @@ local function C_XPOverTime()
 		for k,v in pairs(player.GetAll()) do
 			if v:Team() != TEAM_SPEC then
 				v:C_AddXP(C_Level.XPOverTimeXP)
+				Surf_Notification("+"..C_Level.XPOverTimeXP.." for playing!", v)
 			end
 		end
 	end

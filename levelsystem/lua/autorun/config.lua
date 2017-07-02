@@ -12,11 +12,11 @@ C_Level.XPOverTimeXP = 5
 // DO NOT EDIT BELOW HERE //
 
 if SERVER then
-  include("levels/sv_base.lua")
-  AddCSLuaFile("levels/cl_hud.lua")
+  include("levels/sv_main.lua")
+  AddCSLuaFile("levels/cl_main.lua")
 end
 if CLIENT then
-  include("levels/cl_hud.lua")
+  include("levels/cl_main.lua")
 end
 
 
