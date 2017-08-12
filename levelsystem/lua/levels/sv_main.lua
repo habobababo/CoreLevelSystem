@@ -55,12 +55,10 @@ function meta:C_AddXP(xp)
 end
 
 function meta:C_SetLevel(level)
-	if !IsValid(level) then return end
 	self:SetNWInt("C_LVL", level)
 end
 
 function meta:C_SetXP(xp)
-	if !IsValid(xp) then return end
 	self:SetNWInt("C_XP", xp)
 end
 
