@@ -37,9 +37,6 @@ function meta:C_LevelUp()
 	self:EmitSound( "core/levelup.wav" )
 	hook.Run("C_PlayerLevelUP", self, self:GetNWInt("C_LVL"))
 	self:C_SaveLevel()
-	for k,v in pairs(player.GetAll()) do
-		v:PlayerMsg(Color(230, 210, 40),"[SURF] ",Color(255,100,100), self:Nick(), Color(255,255,255), " has a levelup!")
-	end
 end
 
 function meta:C_AddXP(xp)
