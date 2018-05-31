@@ -33,7 +33,6 @@ function meta:C_LevelUp()
 	end
 	self:SetNWInt("C_LVL", level + 1)
 	self:SetNWInt("C_XP", 0)
-	Surf_Notification("Levelup!", self)
 	self:PS2_AddStandardPoints(200, "+200 Points for LevelUp.")
 	self:EmitSound( "core/levelup.wav" )
 	hook.Run("C_PlayerLevelUP", self, self:GetNWInt("C_LVL"))
