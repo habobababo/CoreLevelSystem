@@ -14,10 +14,7 @@ C_Level.XPOverTimeXP = 5
 if SERVER then
   resource.AddFile("sound/core/levelup.wav")
   include("levels/sv_main.lua")
-  AddCSLuaFile("levels/cl_main.lua")
-end
-if CLIENT then
-  include("levels/cl_main.lua")
+  include("levels/surf.lua")
 end
 
 
